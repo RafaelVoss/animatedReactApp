@@ -41,7 +41,7 @@ export default function Challenges() {
         onSelectType={handleSelectType}
         selectedType={selectedType}
       >
-        <AnimatePresence mode="wait">
+        <AnimatePresence>
           {displayedChallenges.length > 0 && (
             <motion.ol 
               key="list"
@@ -50,7 +50,7 @@ export default function Challenges() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ y: -30, opacity: 0 }}
             >
-              <AnimatePresence>
+              <AnimatePresence mode="wait">
                 {displayedChallenges.map((challenge) => (
                   <ChallengeItem
                     key={challenge.id}

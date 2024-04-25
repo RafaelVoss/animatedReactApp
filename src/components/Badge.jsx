@@ -1,5 +1,12 @@
 import { motion } from 'framer-motion';
 
 export default function Badge({ caption }) {
-  return <motion.span className="badge">{caption}</motion.span>;
-}
+  return (
+  <motion.span 
+    className="badge"
+    animate={{ scale: [1, 1.5, 1] }}
+    transition={{ duration: 0.5 }}
+  >
+    {caption}
+  </motion.span>
+)}
